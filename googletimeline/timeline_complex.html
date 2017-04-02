@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['timeline']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var container = document.getElementById('timeline_complex');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+        dataTable.addColumn({ type: 'string', id: 'Dim1' });
+        dataTable.addColumn({ type: 'string', id: 'Dim2' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+        dataTable.addRows([         
+['Sample Project 1', '$65k - Admin A', new Date('1/1/2011'), new Date('4/30/2012')],['Sample Project 1', '$112k - Admin B', new Date('1/1/2011'), new Date('1/31/2014')],['Sample Project 1', '$49k - Admin C', new Date('1/1/2012'), new Date('1/31/2013')],['Sample Project 1', '$65k - Admin D', new Date('1/1/2013'), new Date('2/28/2014')],['Sample Project 2', '$74k - Admin A', new Date('1/1/2014'), new Date('12/31/2015')],['Sample Project 3', '$67k - Admin A', new Date('1/1/2016'), new Date('12/31/2016')],['Sample Project 4', '$47k - Admin A', new Date('1/1/2017'), new Date('12/31/2017')],['Sample Project 4', '$62k - Admin B', new Date('1/1/2017'), new Date('12/31/2019')],['Sample Project 4', '$47k - Admin C', new Date('1/1/2018'), new Date('12/31/2018')],['Sample Project 4', '$47k - Admin D', new Date('1/1/2019'), new Date('12/31/2019')]
+]);
+
+        chart.draw(dataTable);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="timeline_complex" style="height: 800px;"></div>
+  </body>
+</html>

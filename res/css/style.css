@@ -1,0 +1,106 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+body{
+	font-family: Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+}
+h1{
+	text-align: center;
+	font-size: 1.5em;
+	padding: 10px;
+}
+.demolist{
+	font-size: 1.5em;
+	text-align: center;
+	margin:auto;
+}
+.demolist li{
+	border: solid 1px #dddddd;
+	list-style: none;
+	padding: 10px;
+	display:	inline-block;
+	margin: 10px;
+}
+.demolist img{
+	display: block;
+	width: 300px;
+	height: 250px;
+}
+.demolist a{
+	display: 	block;
+	padding-top: 	15px;
+	font-weight: 	bold;
+	color: black;
+	text-decoration: none;
+}
+.responsive_chart{
+	margin: auto;
+	width: 95%;
+}
+.demo_toolbar{
+	background-color: black;
+	color: white;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.demo_toolbar a{
+	text-decoration: none;
+	color: white;
+}
+.demo_heading{
+	font-size:3em;
+	font-weight: bold;
+	padding: 40px;
+	background-color: black;
+	color: white;
+	margin-bottom: 20px;
+}

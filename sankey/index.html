@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/res/css/style.css">
+<style>
+svg *{
+	font-family: Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+	}
+.mainBars rect{
+  shape-rendering: auto;
+  fill-opacity: 0;
+  stroke-width: 0.5px;
+  stroke: rgb(0, 0, 0);
+  stroke-opacity: 0;
+}
+.subBars{
+	shape-rendering:crispEdges;
+}
+.edges{
+	stroke:none;
+	fill-opacity:0.5;
+}
+</style>
+
+<body>
+<div class="demo_toolbar"><a href="/">< Demos</a></div>
+
+<div id="bipart"></div>
+
+<div style="clear:both;"><h2>Narrative Example:</h1><img src='narrative.png'></div>
+<script src="js/data.js"></script>
+<script src="js/d3.v4.min.js"></script>
+<script src="js/viz.v1.1.0.min.js"></script>
+<script src="js/underscore-min.js"></script>
+<script src="js/obiee_sankey.js"></script>
+
+<script>
+
+draw_bipart(data, target='#bipart');
+
+</script>
+
+</body>
+</html>

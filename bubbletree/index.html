@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Minimal BubbleTree Demo</title>
+	
+</head>
+<body>
+	<link rel="stylesheet" href="/res/css/style.css">
+
+	<div class="demo_toolbar"><a href="/">< Demos</a></div>
+
+
+	<div class="bubbletree-wrapper">
+		<div class="bubbletree"></div>
+	</div>
+	<script type="text/javascript" src="assets/data.js"></script>
+	<script type="text/javascript" src="assets/scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/jquery.history.js"></script>
+	<script type="text/javascript" src="assets/scripts/jquery.tooltip.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/raphael-min.js"></script>
+	<script type="text/javascript" src="assets/scripts/Tween.js"></script>
+	<script type="text/javascript" src="assets/scripts/bubbletree.js"></script>
+	<script type="text/javascript" src="assets/aggregator.js"></script>
+	<script type="text/javascript" src="assets/underscore-min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/styles/bubbletree.css" />
+	<script type="text/javascript" src="assets/styles/cofog.js"></script>
+	<script type="text/javascript" src="assets/obiee_bubbletree.js"></script>
+
+	<script>
+		create_bubbletree(dataset,['Dim1','Dim2','Dim3','Dim4'],'Total','.bubbletree');
+	</script>
+
+</body>
+</html>

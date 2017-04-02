@@ -1,0 +1,62 @@
+<html>
+  <head>
+  <link rel="stylesheet" href="/res/css/style.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      google.charts.load('current', {'packages':['timeline']});
+      google.charts.setOnLoadCallback(drawCharts);
+
+          $(window).resize(function(){
+          drawCharts();
+        });
+
+      function drawCharts() {
+        drawCharta();
+        drawChartb();
+      }
+      function drawCharta() {
+        var container = document.getElementById('timeline');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+
+        dataTable.addColumn({ type: 'string', id: 'Project' });
+        dataTable.addColumn({ type: 'string', id: 'Revenue' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+        dataTable.addRows([         
+
+      ['Project 1', '$13k', new Date('1/13/2014'), new Date('1/31/2015')],['Project 2', '$2.9k', new Date('7/1/2014'), new Date('10/25/2015')],['Project 3', '$465k', new Date('2/2/2015'), new Date('7/31/2017')],['Project 4', '$300k', new Date('2/16/2016'), new Date('3/31/2017')]
+
+      ]);
+
+              chart.draw(dataTable);
+            }
+
+      function drawChartb() {
+        var container = document.getElementById('timeline_complex');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+        dataTable.addColumn({ type: 'string', id: 'Project' });
+        dataTable.addColumn({ type: 'string', id: 'Revenue' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+        dataTable.addRows([         
+        ['Sample Project 1', '$65k - Admin A', new Date('1/1/2011'), new Date('4/30/2012')],['Sample Project 1', '$112k - Admin B', new Date('1/1/2011'), new Date('1/31/2014')],['Sample Project 1', '$49k - Admin C', new Date('1/1/2012'), new Date('1/31/2013')],['Sample Project 1', '$65k - Admin D', new Date('1/1/2013'), new Date('2/28/2014')],['Sample Project 2', '$74k - Admin A', new Date('1/1/2014'), new Date('12/31/2015')],['Sample Project 3', '$67k - Admin A', new Date('1/1/2016'), new Date('12/31/2016')],['Sample Project 4', '$47k - Admin A', new Date('1/1/2017'), new Date('12/31/2017')],['Sample Project 4', '$62k - Admin B', new Date('1/1/2017'), new Date('12/31/2019')],['Sample Project 4', '$47k - Admin C', new Date('1/1/2018'), new Date('12/31/2018')],['Sample Project 4', '$47k - Admin D', new Date('1/1/2019'), new Date('12/31/2019')]
+        ]);
+
+        
+      chart.draw(dataTable);
+      }
+
+    </script>
+  </head>
+  <body>
+  <div class="demo_toolbar"><a href="/">< Demos</a></div>
+    <h1>Projects timeline for ABC Corp.</h1>
+    <div id="timeline" class='responsive_chart' style="height: 300px;"></div>
+    <h1>Project admin timeline for XYZ Inc.</h1>
+    <div id="timeline_complex" class='responsive_chart' style="height: 800px;"></div>
+  </body>
+</html>
